@@ -1,3 +1,4 @@
+
 def create_start_post(date):
     date = __clean_date(date)
     date += '161001000001'  # adding "random" time
