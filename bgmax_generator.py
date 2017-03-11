@@ -25,6 +25,21 @@ def create_deposit_post(date, payment_amount, number_of_payments):
     return __create_post(deposit_post)
 
 
+def create_name_post(payer_name_1, payer_name_2):
+    name_post = '26' + payer_name_1.rjust(35, ' ') + payer_name_2.rjust(35, ' ') + '        '
+    return __create_post(name_post)
+
+
+def create_payer_address_post(address, zip_code):
+    address_post = '27' + address.rjust(35, ' ') + zip_code.rjust(9, ' ') + '                                  '
+    return __create_post(address_post)
+
+
+def create_payer_address_post_2(city, country, country_code):
+    address_post_2 = '28' + city.rjust(35, ' ') + country.rjust(35, ' ') + country_code.rjust(2, ' ') + '      '
+    return __create_post(address_post_2)
+
+
 def __clean_payment(payment_amount):
     payment_amount = payment_amount.replace(',', '')
     payment_amount_content = payment_amount.rjust(18, '0')
