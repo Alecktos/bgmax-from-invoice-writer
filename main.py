@@ -4,7 +4,7 @@ import file_handler
 
 
 def main():
-    date = '2017-03-11'
+    date = cmd_view.get_payment_date()
     file_content = bgmax_generator.create_start_post(date)
     file_content += bgmax_generator.create_opening_post()
     ocr = cmd_view.get_ocr()

@@ -1,6 +1,10 @@
 # coding=utf-8
 
 
+def get_payment_date():
+    return __input('Enter payment date [2017-03-11]: ')
+
+
 def get_ocr():
     return __input('Post 20. Enter OCR: ')
 
