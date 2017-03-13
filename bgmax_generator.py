@@ -36,7 +36,7 @@ def create_payer_address_post(address, zip_code):
 
 
 def create_payer_address_post_2(city, country, country_code):
-    address_post_2 = '28' + city.rjust(35, ' ') + country.rjust(35, ' ') + country_code.rjust(2, ' ') + '      '
+    address_post_2 = '28' + city.ljust(35, ' ') + country.rjust(35, ' ') + country_code.rjust(2, ' ') + '      '
     return __create_post(address_post_2)
 
 

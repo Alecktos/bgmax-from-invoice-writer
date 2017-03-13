@@ -10,7 +10,6 @@ def main():
     ocr = cmd_view.get_ocr()
     amount = cmd_view.get_amount()
     file_content += bgmax_generator.create_payment_post(ocr, amount)
-    file_content += bgmax_generator.create_deposit_post(date, amount, 1)
 
     payer_name_1 = cmd_view.get_payer_name_1()
     payer_name_2 = cmd_view.get_payer_name_2()
@@ -26,6 +25,8 @@ def main():
     country_code = cmd_view.get_payer_country_code()
     if city or country_code:
         file_content += bgmax_generator.create_payer_address_post_2(city, '', country_code)
+
+    file_content += bgmax_generator.create_deposit_post(date, amount, 1)
 
     file_handler.create_file(file_content)
 
